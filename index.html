@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woody - Woodworks</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Woody</a></div>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about/about.html">About</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+    
+            <div class="dropdown_menu open">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about/about.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="action_btn">Get Started</a></li>
+            </div>
+            <script>
+                const toggleBtn = document.querySelector('.toggle_btn')
+                const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+                toggleBtn.onclick = function(){
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('open')
+                    
+                    toggleBtnIcon.classList = isOpen
+                      ? 'fa-solid fa-xmark'
+                      : 'fa-solid fa-bars'
+                }
+            </script>
+            <main>
+                <section id="hero">
+                    <h1>Woody</h1>
+                    <p>Wood - Words</p>
+                </section>
+            </main>
+    </header>
+<div class="pagetwo">
+    <div class="countdown">
+        <img src="https://th.bing.com/th/id/R.394014f4933e6f6050007de7755c5480?rik=oCjnJBVB7bOAGQ&riu=http%3a%2f%2fgetdrawings.com%2ffree-icon%2fthor-hammer-icon-61.png&ehk=U9K6VCh5myLRjLxg0WQ5o4cDJRcoHNjyrA1RPlMXHOw%3d&risl=&pid=ImgRaw&r=0" alt="hammer">
+        <h1>Launching Soon</h1>
+        <h2>Remaining Time</h2>
+        <div id="timer">
+            <div class="timer-box">
+                <span class="timer-value" id="days">00</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-value" id="hours">00</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-value" id="minutes">00</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-value" id="seconds">00</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+            <script class="js" src="./script.js"></script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
